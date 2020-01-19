@@ -580,7 +580,7 @@ public class Service {
 	// soferului in ziua imbarcarii
 	public void sendEmail(Rezervare r, Client c) {
 		SimpleMailMessage msg = new SimpleMailMessage();
-		msg.setTo("mpaula937@gmail.com");// c.getEmail()
+		msg.setTo(c.getEmail()); //mpaula937@gmail.com
 		String d = new SimpleDateFormat("dd-MM-yyyy").format(r.getData());
 		msg.setSubject("Rezervarea dvs pentru data de " + d);
 		Random ra = new Random(6);
